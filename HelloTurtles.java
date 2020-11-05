@@ -95,40 +95,32 @@ public class HelloTurtles {
         String choice = menu();
         switch (choice) {
             case "Polygon": {
-                System.out.println("number of sides");
-                int sides = castle.getInt();
-                System.out.println("length");
-                int length = castle.getInt();
+                int sides = getInt("Insert sides");
+                int length = getInt("Insert length");
                 turt.drawPolygons(sides, length);
                 break;}
 
             case "Many Polygons": {
-                System.out.println("polys");
-                int polys = castle.getInt();
-                System.out.println("sides");
-                int sides = castle.getInt();
-                System.out.println("length");
-                int length = castle.getInt();
+                int polys = getInt("polys");
+                int sides = getInt("sides");
+                int length = getInt("length");
                 turt.manyPolygon(polys, sides, length);
                 break; }
 
             case "Radial": {
-                System.out.println("number of lines");
-                int lines = castle.getInt();
-                System.out.println("length");
-                int length = castle.getInt();
+                int lines = getInt("lines");
+                int length = getInt("length");
                 turt.radial(lines, length);
                 break; }
         
             default:
                 break;
             }
-        // TODO: Your code here
     } // end solution
 
-    public static int getInt() {
+    public static int getInt(String text) {
         //Java Option Pane that prompts user to enter an integer, and stores it as a string
-        String inputString = JOptionPane.showInputDialog("Enter an integer greater than 0: ");
+        String inputString = JOptionPane.showInputDialog(text);
 
         //Converts Option Pane input string into an integer
         int inputToInt = Integer.parseInt(inputString);
