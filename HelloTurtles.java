@@ -93,7 +93,6 @@ public class HelloTurtles {
     public static void solution() {
 
 
-        System.out.println("which option");
         String choice = menu();
         switch (choice) {
             case "Polygon": {
