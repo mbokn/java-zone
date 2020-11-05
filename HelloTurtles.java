@@ -91,26 +91,28 @@ public class HelloTurtles {
      * in loss of points.
      */
     public static void solution() {
+
+
         System.out.println("which option");
         String choice = menu();
         switch (choice) {
             case "Polygon": {
                 int sides = getInt("Insert sides");
                 int length = getInt("Insert length");
-                turt.drawPolygons(sides, length);
+                drawPolygons(t, sides, length);
                 break;}
 
             case "Many Polygons": {
                 int polys = getInt("polys");
                 int sides = getInt("sides");
                 int length = getInt("length");
-                turt.manyPolygon(polys, sides, length);
+                manyPolygon(t, polys, sides, length);
                 break; }
 
             case "Radial": {
                 int lines = getInt("lines");
                 int length = getInt("length");
-                turt.radial(lines, length);
+                radial(t, lines, length);
                 break; }
         
             default:
