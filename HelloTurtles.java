@@ -99,14 +99,14 @@ public class HelloTurtles {
             case "Polygon": {
                 int sides = getInt("Insert sides");
                 int length = getInt("Insert length");
-                drawPolygons(t, sides, length);
+                drawPolygon(t, sides, length);
                 break;}
 
             case "Many Polygons": {
                 int polys = getInt("polys");
                 int sides = getInt("sides");
                 int length = getInt("length");
-                manyPolygon(t, polys, sides, length);
+                manyPolygons(t, polys, sides, length);
                 break; }
 
             case "Radial": {
@@ -123,20 +123,16 @@ public class HelloTurtles {
     public static int getInt(String text) {
         //Java Option Pane that prompts user to enter an integer, and stores it as a string
         String inputString = JOptionPane.showInputDialog(text);
-
         //Converts Option Pane input string into an integer
         int inputToInt = Integer.parseInt(inputString);
 
         //Input Validation
         while (inputToInt < 1) {
-
             inputString = JOptionPane.showInputDialog("Invalid entry, please enter an integer greater than 0: ");
-
             //Converts Option Pane input string into an integer
             inputToInt = Integer.parseInt(inputString);
-
         } //End While Loop
-        
+
         return inputToInt;
     }
     /**
