@@ -127,9 +127,23 @@ public class HelloTurtles {
     } // end solution
 
     public static int getInt() {
-        int out;
-        //INSERT NUMBER INPUT PANE HERE
-        return (out);
+        //Java Option Pane that prompts user to enter an integer, and stores it as a string
+        String inputString = JOptionPane.showInputDialog("Enter an integer greater than 0: ");
+
+        //Converts Option Pane input string into an integer
+        int inputToInt = Integer.parseInt(inputString);
+
+        //Input Validation
+        while (inputToInt < 1) {
+
+            inputString = JOptionPane.showInputDialog("Invalid entry, please enter an integer greater than 0: ");
+
+            //Converts Option Pane input string into an integer
+            inputToInt = Integer.parseInt(inputString);
+
+        } //End While Loop
+        
+        return inputToInt;
     }
     /**
      * Entry point of the program.
