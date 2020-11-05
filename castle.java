@@ -15,7 +15,6 @@ public class castle {
     public static void solution() {
         System.out.println("which option");
         int choice = castle.scan.nextInt();
-        int inp;
         switch (choice) {
             case 1: {
                 System.out.println("number of sides");
