@@ -91,10 +91,46 @@ public class HelloTurtles {
      * in loss of points.
      */
     public static void solution() {
+        System.out.println("which option");
         String choice = menu();
+        switch (choice) {
+            case "Polygon": {
+                System.out.println("number of sides");
+                int sides = castle.getInt();
+                System.out.println("length");
+                int length = castle.getInt();
+                turt.drawPolygons(sides, length);
+                break;}
+
+            case "Many Polygons": {
+                System.out.println("polys");
+                int polys = castle.getInt();
+                System.out.println("sides");
+                int sides = castle.getInt();
+                System.out.println("length");
+                int length = castle.getInt();
+                turt.manyPolygon(polys, sides, length);
+                break; }
+
+            case "Radial": {
+                System.out.println("number of lines");
+                int lines = castle.getInt();
+                System.out.println("length");
+                int length = castle.getInt();
+                turt.radial(lines, length);
+                break; }
+        
+            default:
+                break;
+            }
         // TODO: Your code here
     } // end solution
 
+    public static int getInt() {
+        int out;
+        //INSERT NUMBER INPUT PANE HERE
+        return (out);
+    }
     /**
      * Entry point of the program.
      */
